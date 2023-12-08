@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="row mt-5">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="card mb-3 shadow" style="max-width: 54rem;" >
+        <div class="card-header text-center"><h3>APPLICANT PROFILE</h3></div>
+            <div class="card-body text-left">
+                <div class="row">
+                    <div class="col-6">
+
+                           <p><strong>Applicant Name:</strong>{{application.user.username}}</p>
+                            <p><strong>Skills:</strong>{{application.user.skills}}</p>
+                        <p><strong>Date Of Birth:</strong>{{application.user.DOB}}</p>
+                         <p><strong>Qualification:</strong>{{application.user.qualification}}</p>
+                         <p><strong>Experience: </strong>{{application.user.experience}} years</p>
+                        <p><strong>Download CV: </strong><a href="{{application.user.cv.url}}">{{application.user.cv}}</a></p>
+
+                    </div>
+                   
+                </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+{%endblock%}
